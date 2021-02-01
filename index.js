@@ -34,6 +34,8 @@ b.on('ready', async function(){
                 .setDescription('**Now Playing**\n\nNow Playing: '+res.now_playing.song.text+'\n\n'+aT.join('')+'\n\nYou can use commands like .skip to skip a song!')
                 .setThumbnail(res2.data[0].album.cover_xl)
                 .setFooter('© ItzWiresDev#6193 2020', '');
+		
+    	    b.user.setActivity(res.now_playing.song.text);
 
             b.channels.cache.get('805830098175131718').send(embed).then(sentMsg => {
                 setInterval(function() {
@@ -58,6 +60,8 @@ b.on('ready', async function(){
                                 .setDescription('**Now Playing**\n\nNow Playing: '+res.now_playing.song.text+'\n\nDJ: '+dj+'\n\n'+aT.join(''))
                                 .setThumbnail(res2.data[0].album.cover_xl)
                                 .setFooter('© ItzWiresDev#6193 2020', '');
+				
+			    b.user.setActivity(res.now_playing.song.text);
 
                             sentMsg.edit(embed)
                         })
