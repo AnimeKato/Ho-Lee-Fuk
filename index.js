@@ -31,7 +31,7 @@ b.on('ready', async function(){
             const embed = new discord.MessageEmbed()
                 .setColor('#0099ff')
                 .setTitle('Vibe In Anime')
-                .setDescription('**Now Playing**\n\nNow Playing: '+res.now_playing.song.text+'\n\n'+aT.join('')+'\n\nYou can use commands like .skip to skip a song!')
+                .setDescription('**Now Playing**\n\nNow Playing: '+res.now_playing.song.text+'\n\n'+aT.join('')+'\n\nYou can use commands like .skip and .stop to control the music')
                 .setThumbnail(res2.data[0].album.cover_xl)
                 .setFooter('© ItzWiresDev#6193 2020', '');
 		
@@ -57,7 +57,7 @@ b.on('ready', async function(){
                             const embed = new discord.MessageEmbed()
                                 .setColor('#0099ff')
                                 .setTitle('Vibe In Anime')
-                                .setDescription('**Now Playing**\n\nNow Playing: '+res.now_playing.song.text+'\n\nDJ: '+dj+'\n\n'+aT.join(''))
+                                .setDescription('**Now Playing**\n\nNow Playing: '+res.now_playing.song.text+'\n\nDJ: '+dj+'\n\n'+aT.join('')+'\n\nYou can use commands like .skip and .stop to control the music')
                                 .setThumbnail(res2.data[0].album.cover_xl)
                                 .setFooter('© ItzWiresDev#6193 2020', '');
 				
@@ -171,6 +171,14 @@ b.on('message', async function(msg){
         fetch('https://some-random-api.ml/animu/pat').then(data => {
             msg.channel.send(data.link)
         })
+    }
+	
+    if(command === "stop"){
+       const voiceChannel = b.member.voice.channel;
+       if (!voiceChannel) return msg.channel.send("No voice channel.");
+	   
+        voiceChannel.leave()
+	msg.channel.send('I left!!!')
     }
 
     if(command === "skip"){
