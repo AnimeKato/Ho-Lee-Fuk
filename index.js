@@ -20,7 +20,7 @@ b.on('ready', async function(){
         b.channels.cache.get('805830098175131718').bulkDelete(messages // Bulk deletes all messages that have been fetched and are not older than 14 days (due to the Discord API)
     )});
 
-    fetch('http://3.10.143.23/api/nowplaying/2').then(res => {
+    fetch('http://3.10.143.23/api/nowplaying/3').then(res => {
         let aT = ['<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>', '<:dash:793908719099707462>']
 
         let time = Math.round((res.now_playing.elapsed / res.now_playing.duration) * 20)
@@ -39,7 +39,7 @@ b.on('ready', async function(){
 
             b.channels.cache.get('805830098175131718').send(embed).then(sentMsg => {
                 setInterval(function() {
-                    fetch('http://3.10.143.23/api/nowplaying/2').then(res => {
+                    fetch('http://3.10.143.23/api/nowplaying/3').then(res => {
                         let aT = ['<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>', '<:dash:805829216695353374>','<:dash:805829216695353374>']
                         let time = Math.round((res.now_playing.elapsed / res.now_playing.duration) * 20)
 
@@ -84,7 +84,7 @@ b.on('message', async function(msg){
 
         voiceChannel.join()
             .then(connection => {
-                connection.play('https://never-gonna-give-you-up-never-gonna-let-you-down.wiresdev.ga/radio/8010/radio.mp3?1612190236', {volume: 0.5});
+                connection.play('https://never-gonna-give-you-up-never-gonna-let-you-down.wiresdev.ga/radio/8020/radio.mp3?1612259607', {volume: 0.5});
             });
     }
 
