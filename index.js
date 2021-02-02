@@ -174,7 +174,7 @@ b.on('message', async function(msg){
     }
 	
     if(command === "stop"){
-       const voiceChannel = b.member.voice.channel;
+       const voiceChannel = msg.member.voice.channel;
        if (!voiceChannel) return msg.channel.send("No voice channel.");
 	   
         voiceChannel.leave()
