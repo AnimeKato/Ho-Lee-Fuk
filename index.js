@@ -526,4 +526,4 @@ async function spawnLoot(msg) {
     });
 }
   
-app.listen(80)
+app.listen(6000)
