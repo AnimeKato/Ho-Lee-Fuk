@@ -237,7 +237,7 @@ b.on('message', async function(msg){
         let i = 1
 
         database.forEach(u => {
-            renderText = renderText + i + ') ' + u.username + '🪙' + u.currency + '\n'
+            renderText = renderText + i + ') ' + u.username + '  🪙' + u.currency + '\n'
             i++
         })
 
