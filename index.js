@@ -153,7 +153,7 @@ b.on('message', async function(msg){
         }, Math.floor((Math.random() * 1000) + 0))
     }
 
-    if (Math.floor(Math.random() * 40) === 1){
+    if (Math.floor(Math.random() * 100) === 1){
         setTimeout(async function(){
             let enemy2 = eeee[Math.floor((Math.random() * eeee.length) + 0)]
 
