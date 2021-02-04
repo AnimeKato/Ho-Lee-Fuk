@@ -37,7 +37,7 @@ const enemies = require('./db/enemys')
 const ver = 'PRE-0.5.3'
 const prefix = "."
 
-mongoose.connect("mongodb+srv://bot:q91e8w1skIPPnQJE@cluster0.axpdp.mongodb.net/e?retryWrites=true&w=majority", {
+mongoose.connect("", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
