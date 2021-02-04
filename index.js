@@ -1,3 +1,5 @@
+const token = 'why?'
+
 const discord = require('discord.js');
 const fetch = require('get-json');
 const mongoose = require("mongoose");
@@ -562,7 +564,7 @@ b.on('message', async function(msg){
     }
 });
 
-b.login('ODA1ODA1MjY3MTEwNDYxNDY0.YBgOog.mA_jOC6zlhoNAiwaGOsxG_ShoeI');
+b.login(token);
 
 //functions
 
