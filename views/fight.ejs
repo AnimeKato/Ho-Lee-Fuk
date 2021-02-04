@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            body{
+                background: url('https://media.discordapp.net/attachments/718027263882297416/763053305415860224/Battlecord_-_Website_BG.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                font-family: sans-serif;
+                color: white;
+                text-align: center;
+            }
+
+            .column {
+                float: left;
+                width: 75px;
+                height: 150px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background: url('https://media.discordapp.net/attachments/804806972741648394/806840280061313094/button.png');
+                background-position: center;
+                margin: 10px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .attack-container{
+                width: 33%;
+            }
+
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 50%;
+                }
+                .attack-container{
+                    width: 100%;
+                }
+            }
+
+            .login{
+                position: absolute;
+                background: aliceblue;
+                width: 80%;
+                height: 20%;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                border-radius: 10px 10px 0px 0px;
+                color: black;
+            }
+
+            code{
+                padding: 2px;
+                background: black;
+                color: white;
+                border-radius: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1><%= e.name %></h1>
+        <br>
+        <img src="<%= e.img %>">
+        <center>
+            <div class="attack-container">
+                <div class="row">
+                    <div class="column">
+                        
+                    </div>
+                    <div class="column">
+
+                    </div>
+                    <div class="column">
+
+                    </div>
+                    <div class="column">
+
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <div class="login">
+            <h1>You need to login to view this page</h1> 
+            <h2>DM <code>Ho Lee Fuk#3772</code> With the code <code><%= code %></code></h2>
+        </div>
+    </body>
+</html>
